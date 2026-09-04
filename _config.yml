@@ -1,15 +1,16 @@
-# AISTATS conference site settings
-# Replace every 20XX placeholder for the new year (repo name, baseurl, year, banner title, email).
+# AISTATS 2027 conference site settings
 
 title: Artificial Intelligence and Statistics Conference
 description: >-
-  Website for the AISTATS 20XX conference (Artificial Intelligence and Statistics).
+  Website for the AISTATS 2027 conference (Artificial Intelligence and Statistics).
 url: "https://aistats.org"
-baseurl: "/aistats20XX/"
-# Timezone label used in some date displays (optional), e.g. UTC, EST, ICT
-# timezone:
+baseurl: "/aistats2027/"
 
-repository: aistats/aistats20XX
+# Deadline display timezone for listdates.html (AOE = Anywhere on Earth, end of day).
+# Override per deadline with tz: UTC (or CEST, …). Do not embed AoE in date strings.
+timezone: AOE
+
+repository: aistats/aistats2027
 
 # Conference Twitter/X handle (shared society account is fine)
 twitter_username: aistats_conf
@@ -18,8 +19,8 @@ github_username: aistats
 
 author:
   name: AISTATS
-  # Conference contact mailbox, e.g. aistats20XX@gmail.com
-  email:
+  # Conference contact mailbox
+  email: aistats2027@gmail.com
 comments: false
 
 markdown: kramdown
@@ -30,16 +31,15 @@ plugins:
 encoding: utf-8
 remote_theme: aistats/jekyll-theme
 # Selects AISTATS CSS, favicon, and style-specific includes in the shared theme.
-# Clarified or replaced under CIP-0002 Phase C (branding); keep as aistats until then.
 style: aistats
 
 ghub:
   edit: true
-  repository: aistats20XX
+  repository: aistats2027
 
 # Banner file must live under assets/images/
 banner: resort.png
-banner_title: Artificial Intelligence and Statistics 20XX
+banner_title: Artificial Intelligence and Statistics 2027
 
 conference:
   full_name: Artificial Intelligence and Statistics
@@ -56,26 +56,18 @@ conference:
     url:
     show: false
   room:
-  # Venue name, e.g. Splash Beach Resort
+  # Venue TBA (virtual: dates & venue coming soon)
   venue:
   venue_url:
-  # City, Country
-  location:
-  year: 20XX
-  # Ordinal instance, e.g. 29th
-  instance:
+  # City, Country — announced as Montréal for 2027
+  location: Montréal, Canada
+  year: 2027
+  # Ordinal instance
+  instance: 30th
   styling: International Conference on
 
   # Conference meeting days: one YAML list entry per calendar day (not a single
-  # range string). The theme and schedule helpers iterate these as individual days.
-  # Preferred formats (pick one style and use it consistently):
-  #   - 3 May 20XX
-  #   - 4 May 20XX
-  #   - 5 May 20XX
-  # or ISO calendar dates:
-  #   - 20XX-05-03
-  #   - 20XX-05-04
-  #   - 20XX-05-05
+  # range string). Leave TBA until meeting dates are confirmed.
   dates:
   - TBA
 
@@ -86,24 +78,24 @@ conference:
     name: OpenReview
 
   # Key dates shown on dates.md via {% include listdates.html %}.
-  # Fields: name, type, date; optional enddate, important, time, text, old, endold, hide.
+  # Store parseable date/enddate/time values only. Site timezone: AOE.
+  # Seeded from virtual.aistats.org/Conferences/2027 announcements (Sep 2026).
   deadlines:
     - name: Abstract submission deadline
       type: submission
-      date:
+      date: 29 September 2026
       important: true
     - name: Paper submission deadline
       type: submission
-      date:
+      date: 6 October 2026
       important: true
-    - name: Author response period
+    - name: Reviews released
       type: review
-      date:
-      enddate:
+      date: 16 November 2026
       important: true
     - name: Paper decision notifications
       type: decision
-      date:
+      date: 20 January 2027
       important: true
     - name: Camera-ready deadline
       type: submission
@@ -115,26 +107,38 @@ conference:
       enddate:
       important: true
 
-  # Organising chairs (rendered on committee.html). Leave people blank until appointed.
+  # Organising chairs (from virtual.aistats.org/virtual/2027/organizers).
   chairs:
   - type: General Chairs
     people:
-    - family:
-      given:
+    - family: Ramdas
+      given: Aaditya
+      url: https://www.stat.cmu.edu/~aramdas/
+      institute: Carnegie Mellon University
+    - family: Solin
+      given: Arno
       url:
-      institute:
+      institute: ELLIS Institute Finland / Aalto University
   - type: Program Chairs
     people:
-    - family:
-      given:
+    - family: Berthet
+      given: Quentin
+      url: https://q-berthet.github.io/
+      institute: Google DeepMind
+    - family: Dieuleveut
+      given: Aymeric
       url:
-      institute:
+      institute: École polytechnique
   - type: Workflow Chairs
     people:
-    - family:
-      given:
+    - family: Dagréou
+      given: Mathieu
       url:
-      institute:
+      institute: INRIA
+    - family: Fermanian
+      given: Jean-Baptiste
+      url:
+      institute: INRIA/INRAE
   - type: Local Chairs
     people:
     - family:
@@ -165,6 +169,3 @@ conference:
       given:
       url:
       institute:
-  # Optional roles used in recent years:
-  # - type: Workshop Chairs
-  # - type: Publicity Chair

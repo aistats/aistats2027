@@ -1,51 +1,17 @@
-# AISTATS Conference Stub Site
+# AISTATS 2027
 
-This repository is the GitHub template for yearly AISTATS conference websites (`aistats20XX`). Create a new public repository from this template, then replace the `20XX` placeholders.
+Year site for the 30th International Conference on Artificial Intelligence and Statistics (AISTATS 2027), planned for Montréal, Canada. Hosted on GitHub Pages at <https://aistats.org/aistats2027/>.
 
-The site is a [Jekyll](https://jekyllrb.com/) project hosted on GitHub Pages. Most content is driven by YAML in `_config.yml` and markdown pages; the visual chrome comes from the remote theme [`aistats/jekyll-theme`](https://github.com/aistats/jekyll-theme).
+Content is driven by `_config.yml` and markdown pages; chrome comes from the remote theme [`aistats/jekyll-theme`](https://github.com/aistats/jekyll-theme). Organiser notes live under `_doc/` (unpublished).
 
-## Create the yearly repo (org admin)
+## Status
 
-These steps need admin access on the `aistats` GitHub organisation:
-
-1. Create a new public repository named `aistatsXXXX` from this template ([new repository](https://github.com/organizations/aistats/repositories/new)).
-2. Set a short description (dates and venue), then create the repo.
-3. Create an `aistatsXXXX` admin team and grant it admin on that repository.
-4. After the site is live, update the society landing page at [aistats.github.io](https://github.com/aistats/aistats.github.io) if this year should be listed as current.
-
-## First steps after creating `aistats20XX`
-
-1. Set `baseurl` to `/aistats20XX/` and `repository` / `ghub.repository` in `_config.yml`.
-2. Fill `conference.year`, `instance`, `location`, `venue`, `dates`, `banner`, and `banner_title`.
-3. Add chair details under `conference.chairs` and a contact email under `author.email`.
-4. Place banner (and optional venue) images in `assets/images/`.
-5. Confirm the site builds at <https://aistats.org/aistats20XX/>.
-
-Organiser workflow notes (venue, committees, submissions, and so on) live in [`_doc/`](./_doc/README.md). Those files are not published as site pages.
-
-Programme management (CIPs, backlog, VibeSafe) for AISTATS sites and themes lives in the sibling **site-management** repository (`aistats/site-management`), not in this template.
-
-## Page layout
-
-Standard public pages match recent conferences (2023–2025):
-
-| File | Purpose |
-|------|---------|
-| `index.md` | Home |
-| `dates.md` | Key dates (`{% include listdates.html %}`) |
-| `call-for-papers.md` | Call for papers |
-| `code-of-conduct.md` | Code of conduct |
-| `registration.md` | Registration |
-| `committee.html` | Organising committee from `_config.yml` |
-| `faqs.md` / `reviewer_guidelines.md` / `ac_guidelines.md` | Author and review guidance (guidelines are seeded from recent years; edit in place, then fold improvements back into this stub) |
-| `invited.md` / `schedule.md` / `awards.md` | Programme |
-| `camera.md` / `poster.md` | Camera-ready and posters |
-| `other.md` | Past meetings (usually hidden) |
-
-Optional venue starters are underscored (`_accommodation.html`, `_local.html`) so they stay out of the nav until you promote them.
+- Location: Montréal, Canada (venue and meeting days TBA)
+- Draft programme: `conference.draft: true`
+- Early submission deadlines seeded from [virtual.aistats.org](https://virtual.aistats.org/Conferences/2027); confirm before relying on them
 
 ## Technical notes
 
-- Edit YAML and markdown rather than inventing new HTML layouts when possible.
-- Local includes under `_includes/` override theme fragments for the banner and date lists.
-- For local builds you may need `webrick` in the `Gemfile` on newer Ruby versions.
+- `baseurl` must remain `/aistats2027/` so CSS and assets resolve under that path.
+- Deadline timezone: top-level `timezone: AOE`. Keep date values parseable; do not put “Anywhere on Earth” inside YAML date strings.
+- For syncing with virtual, see `_doc/virtual-sync.md` if present, or [`aistats/site-management`](https://github.com/aistats/site-management) `scripts/sync_virtual/`.

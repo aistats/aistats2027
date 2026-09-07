@@ -38,7 +38,7 @@ ghub:
   repository: aistats2027
 
 # Banner file must live under assets/images/
-banner: resort.png
+banner: montreal_qc_aistats_2027.jpg
 banner_title: Artificial Intelligence and Statistics 2027
 
 conference:
@@ -69,12 +69,15 @@ conference:
   # Conference meeting days: one YAML list entry per calendar day (not a single
   # range string). Leave TBA until meeting dates are confirmed.
   dates:
-  - TBA
+  - 2027-05-03
+  - 2027-05-04
+  - 2027-05-05
+  - 2027-05-06
 
   # OpenReview (or other) submission site
   submission:
-    show: false
-    url:
+    show: true
+    url: https://openreview.net/group?id=aistats.org/AISTATS/2027/Conference
     name: OpenReview
 
   # Key dates shown on dates.md via {% include listdates.html %}.
@@ -103,8 +106,8 @@ conference:
       important: true
     - name: Conference dates
       type: submission
-      date:
-      enddate:
+      date: 3 May 2027
+      enddate: 6 May 2027
       important: true
 
   # Organising chairs (from virtual.aistats.org/virtual/2027/organizers).
@@ -114,10 +117,10 @@ conference:
     - family: Ramdas
       given: Aaditya
       url: https://www.stat.cmu.edu/~aramdas/
-      institute: Carnegie Mellon University
+      institute: Stanford University
     - family: Solin
       given: Arno
-      url:
+      url: https://arno.solin.fi
       institute: ELLIS Institute Finland / Aalto University
   - type: Program Chairs
     people:
@@ -127,7 +130,7 @@ conference:
       institute: Google DeepMind
     - family: Dieuleveut
       given: Aymeric
-      url:
+      url: https://www.cmap.polytechnique.fr/~aymeric.dieuleveut/
       institute: École polytechnique
   - type: Workflow Chairs
     people:
@@ -139,33 +142,33 @@ conference:
       given: Jean-Baptiste
       url:
       institute: INRIA/INRAE
-  - type: Local Chairs
-    people:
-    - family:
-      given:
-      url:
-      institute:
+#  - type: Local Chairs
+#    people:
+#    - family:
+#      given:
+#      url:
+#      institute:
   - type: Publication Chair
     people:
-    - family:
-      given:
-      url:
-      institute:
-  - type: Sponsorship Chairs
-    people:
-    - family:
-      given:
-      url:
-      institute:
-  - type: Inclusivity Chair
-    people:
-    - family:
-      given:
-      url:
-      institute:
-  - type: Journal-to-Conference Chair
-    people:
-    - family:
-      given:
-      url:
-      institute:
+    - family: Trapp
+      given: Martin
+      url: https://trappmartin.github.io/
+      institute: KTH Royal Institute of Technology
+#  - type: Sponsorship Chairs
+#    people:
+#    - family:
+#      given:
+#      url:
+#      institute:
+#  - type: Inclusivity Chair
+#    people:
+#    - family:
+#      given:
+#      url:
+#      institute:
+#  - type: Journal-to-Conference Chair
+#    people:
+#    - family:
+#      given:
+#      url:
+#      institute:

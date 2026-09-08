@@ -2,6 +2,7 @@
 title: Poster Instructions
 layout: default
 weight: 4
+hide: true
 ---
 
 ## Poster Instructions

@@ -2,7 +2,7 @@
 title: AC Guidelines
 layout: default
 weight: 6
-hide: false
+hide: true
 ---
 
 > **Stub starting point.** Copied from AISTATS 2025 and lightly generalised. Fold in process changes each year, then copy improvements back into this stub.

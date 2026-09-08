@@ -2,7 +2,7 @@
 title: Code of Conduct
 layout: default
 weight: 2
-hide: false
+hide: true
 ---
 
 # Code of Conduct

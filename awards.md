@@ -2,6 +2,7 @@
 title: Awards
 layout: default
 weight: 8
+hide: true
 ---
 
 ## Awards
